@@ -433,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5650423630096164307, guid: ed7afb02a2246614da8d0e93b155ef48, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5653183992306882753, guid: ed7afb02a2246614da8d0e93b155ef48, type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -1204,10 +1204,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1218,7 +1218,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 10, y: 7}
   m_EdgeRadius: 0
 --- !u!50 &2038617046
 Rigidbody2D:
@@ -1253,6 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60fa916333940b4e9863bbd39030271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 500
   player: {fileID: 1452186958}
   isFlipped: 0
 --- !u!114 &2038617051
@@ -1270,7 +1271,7 @@ MonoBehaviour:
   attackDamage: 10
   specialAttackDamage: 40
   attackOffset: {x: 0, y: 0, z: 0}
-  attackRange: 1
+  attackRange: 3
   attackMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256

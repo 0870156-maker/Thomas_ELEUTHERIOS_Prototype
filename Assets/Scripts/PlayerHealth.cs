@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died");
+        GetComponent<Collider2D>().enabled = false;
     }
 
     // Update is called once per frame

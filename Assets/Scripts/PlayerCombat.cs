@@ -30,7 +30,17 @@ public class PlayerCombat : MonoBehaviour
         // Damage enemies
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            Enemy enemyScript = enemy.GetComponent<Enemy>();
+            if (enemyScript != null)
+            {
+                enemyScript.TakeDamage(attackDamage);
+            }
+
+            Boss bossScript = enemy.GetComponent<Boss>();
+            if (bossScript != null)
+            {
+                bossScript.TakeDamage(attackDamage);
+            }
         }
     }
 
